@@ -1,5 +1,5 @@
 DEMO osoitteessa https://jsolo.herokuapp.com/ 
-HUOM! Demossa ei toimi yhteystietolomake, eikä blogi sisällä mitään koska ei ole tietokantaa.
+HUOM! Demossa ei toimi yhteydenottolomake, eikä blogi sisällä mitään koska ei ole tietokantaa.
 SQL-dumppi löytyy /models/harkkasivu.sql
 
 Luo kanta ja taulut dumpin avulla.
