@@ -1,0 +1,39 @@
+<%- include('./includes/header') -%>
+
+
+<%- include('./includes/jumbotron', {'sivuteksti' : 'etusivu'}) -%>
+
+<%- include('./includes/navbar') -%>
+
+
+<div class="container w-50 mt-4 mb-4 pb-4">
+    <form method="POST" action="/lomake">
+        <div class="form-group">
+            <label for="nimi">Nimi:</label>
+            <input type="text" name="nimi" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="organisaatio">Organisaatio:</label>
+            <input type="text" name="organisaatio" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="puh">Puhelinnumero:</label>
+            <input type="text" name="puh" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Sähköposti:</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="viesti">Viesti:</label>
+            <textarea name="viesti" rows="10"  cols="10" class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark">Lähetä viesti</button>
+    </form>
+
+    <% if (ilmoitus) { %>
+        <div class="alert alert-dark"><%=ilmoitus%></div>
+
+    <% } %>
+
+<%- include('./includes/footer') -%>

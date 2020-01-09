@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Etusivu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blogi">Blogi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/lomake" >Yhteydenotto</a>
+      </li>
+      <% if(kayttaja) { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Kirjaudu ulos</a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>

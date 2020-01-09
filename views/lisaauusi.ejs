@@ -1,0 +1,33 @@
+<%- include('./includes/header') -%>
+
+
+<%- include('./includes/jumbotron', {'sivuteksti' : 'kirjoitussivu'}) -%>
+
+<%- include('./includes/navbar') -%>
+<script src="https://cdn.ckeditor.com/4.13.1/basic/ckeditor.js"></script>
+
+<div class="container mt-4 mb-4 pb-4">
+    <form method="POST" action="/lisaauusi">
+        <div class="form-group">
+            <label for="otsikko">Otsikko:</label>
+            <input type="text" name="otsikko" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="teksti">Blogiteksti:</label>
+            <textarea name="teksti" class="form-control"></textarea>
+            <script>
+                CKEDITOR.replace('teksti');
+            </script>
+          </div>
+          <button type="submit" class="btn btn-dark">Lisää kirjoitus</button>
+    </form>
+    <% if (virhe) { %>
+        <div class="alert alert-dark"><%=virhe%></div>
+
+    <% } %>
+</div>
+
+
+
+
+<%- include('./includes/footer') -%>
